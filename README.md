@@ -43,15 +43,42 @@ This project implements a complete database schema for managing an online bookst
 
 ## Usage
 
-1. Run the SQL script in your MySQL database:
+### Option 1: Using Python Script (Recommended)
+1. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Update MySQL connection details in `MySQLServer.py`:
+   - Change `user='root'` to your MySQL username
+   - Change `password=''` to your MySQL password
+   - Change `host='localhost'` if your MySQL server is on a different host
+
+3. Run the Python script:
+   ```bash
+   python MySQLServer.py
+   ```
+
+4. Create tables using the SQL script:
+   ```bash
+   mysql -u your_username -p < task_2.sql
+   ```
+
+### Option 2: Direct SQL Execution
+1. Run the complete SQL script in your MySQL database:
    ```sql
    source alx_book_store.sql;
    ```
 
-2. The script will:
-   - Create the database
-   - Create all tables with proper constraints
-   - Insert sample data
+2. Or run the table creation script:
+   ```sql
+   source task_2.sql;
+   ```
+
+The scripts will:
+- Create the database (if it doesn't exist)
+- Create all tables with proper constraints
+- Insert sample data (in alx_book_store.sql)
 
 ## Sample Data
 
